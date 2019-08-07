@@ -1,5 +1,7 @@
 FROM tensorflow/tensorflow:latest
 
+RUN apt-get update
+RUN apt-get install software-properties-common
 RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
 RUN apt-get update -y --fix-missing
 RUN apt-get install -y ffmpeg
